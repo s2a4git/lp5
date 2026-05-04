@@ -31,3 +31,5 @@
 ### [14. Mini Image Color](https://download-directory.github.io?url=https://github.com/s2a4git/lp5/tree/main/lp5-datasets/14%20Mini%20Image%20Color)
 
 > Note: Also download all the models from the inner [README](https://github.com/s2a4git/lp5/blob/main/lp5-datasets/14%20Mini%20Image%20Color/README.md).
+
+[Manual](https://github.com/s2a4git/lp5/blob/main/manual.pdf)
