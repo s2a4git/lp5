@@ -15,13 +15,23 @@ from tensorflow.keras.layers import (
 from tensorflow.keras.utils import Sequence
 from sklearn.model_selection import train_test_split
 
+import zipfile
+
+zip_path = "./UTKFace.zip"
+extract_path = "./UTKFace"
+
+with zipfile.ZipFile(zip_path, "r") as zip_ref:
+    zip_ref.extractall(extract_path)
+
+print("Extraction done!")
+
 # # Only for GPU #REMOVE THIS#
 # gpus = tf.config.experimental.list_physical_devices("GPU")
 # for gpu in gpus:
 #     tf.config.experimental.set_memory_growth(gpu, True)
 
 # CONFIG
-DATA_DIR = "UTKFace"  # change if needed
+DATA_DIR = "./UTKFace"  # change if needed
 IMG_SIZE = 64
 EPOCHS = 10
 BATCH_SIZE = 16
@@ -152,4 +162,4 @@ def predict_image(img_path):
 
 # Test Prediction
 # Put any image path here
-predict_image("UTKFace/105_1_1_20170112213303693.jpg.chip.jpg")
+predict_image("./UTKFace/39_0_0_20170104202631251.jpg.chip.jpg")

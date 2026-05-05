@@ -12,8 +12,18 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Flatten, Dense, Dropout, GlobalAveragePooling2D
 from tensorflow.keras.optimizers import Adam
 
+import zipfile
+
+zip_path = "./face_dataset.zip"  # change if needed
+extract_path = "./face_dataset"
+
+with zipfile.ZipFile(zip_path, "r") as zip_ref:
+    zip_ref.extractall(extract_path)
+
+print("Extraction done!")
+
 # Dataset Path
-dataset_dir = "face_dataset"
+dataset_dir = "./face_dataset"
 
 img_height = 224
 img_width = 224
